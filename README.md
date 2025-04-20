@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tunisie-Annonce Scraper
 
 ## Description
@@ -9,3 +10,6 @@ Ce projet est divisé en deux parties :
 1. Clonez le dépôt :
    ```bash
    git clone https://github.com/<ton-username>/tunisie-annonce-scraper.git
+=======
+# tunisie-annonce-scraper
+>>>>>>> ad2a26efb5fef5cc113344c0176c8c02caa5b006
