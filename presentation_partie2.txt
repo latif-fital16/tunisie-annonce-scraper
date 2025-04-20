@@ -1,0 +1,27 @@
+Présentation : Tableau de bord des annonces immobilières (Partie 2)
+
+1. Contexte et Objectifs
+- Cette Partie 2 fait suite à la Partie 1, où j’ai scrapé des annonces immobilières sur Tayara.tn et créé une API REST avec FastAPI.
+- L’objectif est de créer un tableau de bord interactif pour visualiser et filtrer les annonces de janvier et février 2025.
+
+2. Fonctionnement de la Solution
+- Données : Les annonces sont chargées depuis `annonces_tayara_jan_fev_2025.csv`. En raison des protections anti-bot sur Tayara.tn, des données simulées ont été utilisées.
+- Interface : Le tableau de bord est organisé avec des filtres, un tableau paginé, et un graphique.
+- Filtres : Deux filtres permettent de filtrer les annonces par localisation et par mois (Janvier ou Février).
+- Tableau : Affiche les annonces avec les colonnes Titre, Prix, Type de bien, Localisation, Superficie, Date de publication, et Lien, avec une pagination pour une meilleure lisibilité.
+- Visualisation : Un histogramme montre la répartition des prix par localisation, avec des couleurs pour différencier les localisations.
+
+3. Choix Techniques
+- Dash : Utilisé pour créer le tableau de bord interactif, car il est simple à intégrer avec Python et permet des visualisations interactives.
+- Plotly : Utilisé pour générer l’histogramme des prix.
+- Pandas : Utilisé pour manipuler les données (filtrage, conversion des prix en valeurs numériques).
+- FastAPI : L’API de la Partie 1 reste opérationnelle pour fournir les données.
+
+4. Limites et Perspectives
+- Limite : Le scraping sur Tayara.tn a été bloqué par des protections anti-bot, donc des données simulées ont été utilisées.
+- Perspective : Intégrer une API publique ou un service comme ScrapingBee pour contourner les protections anti-bot et obtenir plus de données.
+
+5. Démonstration
+- Lancez l’API (facultatif) : `uvicorn main:app --reload`
+- Lancez le tableau de bord : `python dashboard.py`
+- Accédez à `http://127.0.0.1:8050/` pour voir le tableau de bord.
